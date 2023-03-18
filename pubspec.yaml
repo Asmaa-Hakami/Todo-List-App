@@ -1,0 +1,54 @@
+name: todo_list_app
+description: A new Flutter project.
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+  #State Management package
+  flutter_riverpod: ^2.3.2
+
+  #Firebase packages
+  cloud_firestore: ^4.4.4
+  firebase_core: ^2.7.1
+
+  shared_preferences: ^2.0.18
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  flutter_launcher_icons: "^0.12.0"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/todoAppIcon.png"
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts: 
+  - family: Cairo
+    fonts: 
+      - asset: assets/fonts/cairosemibold600.ttf
+        weight: 600
+      - asset: assets/fonts/cairoregular700.ttf
+        weight: 700
+      - asset: assets/fonts/cairomedium500.ttf
+        weight: 500
