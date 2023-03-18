@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/widgets.dart';
 import '../../../model/todo.dart';
-import '../todo_item_card.dart';
+import 'todo_item_card.dart';
 
 class ShowSearchResult extends StatelessWidget {
   final String searchText;

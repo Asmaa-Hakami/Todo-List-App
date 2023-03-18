@@ -117,6 +117,7 @@ Future<void> _addTasks(String taskName, String taskDesc, String taskTag) async {
       'title': taskName,
       'description': taskDesc,
       'id': taskTag,
+      "isFinished": false
     },
   ).then((value) => value.update({"id": value.id}));
 }
