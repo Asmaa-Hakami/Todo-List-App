@@ -77,9 +77,12 @@ class AddEditTodoAlertScreen extends StatelessWidget {
       actions: [
         GestureDetector(
           onTap: () {
-            _addTasks(taskNameController.text, taskDescController.text,
-                    todoModel.id ?? "0")
-                .then((value) => Navigator.pop(context));
+            todoModel.id == null
+                ? _addTask(taskNameController.text, taskDescController.text)
+                    .then((value) => Navigator.pop(context))
+                : _updateTask(taskNameController.text, taskDescController.text,
+                        todoModel.id!, todoModel.isFinished!)
+                    .then((value) => Navigator.pop(context));
           },
           child: Container(
             alignment: Alignment.center,
@@ -111,13 +114,25 @@ class AddEditTodoAlertScreen extends StatelessWidget {
   }
 }
 
-Future<void> _addTasks(String taskName, String taskDesc, String taskTag) async {
+Future<void> _addTask(String taskName, String taskDesc) async {
   await FirebaseFirestore.instance.collection('TodoList').add(
     {
       'title': taskName,
       'description': taskDesc,
-      'id': taskTag,
+      'id': "0",
       "isFinished": false
     },
   ).then((value) => value.update({"id": value.id}));
+}
+
+Future<void> _updateTask(
+    String taskName, String taskDesc, String taskTag, bool isFinished) async {
+  await FirebaseFirestore.instance.collection('TodoList').doc(taskTag).update(
+    {
+      'title': taskName,
+      'description': taskDesc,
+      'id': taskTag,
+      "isFinished": isFinished
+    },
+  );
 }
