@@ -1,17 +1,22 @@
-# todo_list_app
+# Todo List App
 
-A new Flutter project.
+A Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a simple Todo List Application with riverpod and firebase.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Screenshots of running application on ios simulator.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![splash](https://user-images.githubusercontent.com/52636680/226134990-57c780c8-8e56-4364-b41f-93d96a0b2ef6.png)
+
+![home](https://user-images.githubusercontent.com/52636680/226135168-53bd4f17-0b56-4954-b7e9-77c5a5c49446.png)
+
+![search](https://user-images.githubusercontent.com/52636680/226135187-86023efd-af56-4555-b903-4d632da4da33.png)
+
+![add](https://user-images.githubusercontent.com/52636680/226135198-f4346b52-ee77-46ee-9460-e23298ce4de5.png)
+
+![edit](https://user-images.githubusercontent.com/52636680/226135221-d087d292-5169-4b11-beff-30a3ede7db7c.png)
+
 # Todo-List-App
